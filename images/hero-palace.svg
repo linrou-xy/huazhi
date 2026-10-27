@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 720" role="img" aria-labelledby="title desc">
+  <title id="title">梦幻花园彩妆礼盒</title>
+  <desc id="desc">粉色宫廷花园中摆放着口红、腮红和香水。</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff9f5"/><stop offset="1" stop-color="#efd1cf"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff0b6"/><stop offset=".45" stop-color="#c69243"/><stop offset="1" stop-color="#f6d886"/>
+    </linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff3f0"/><stop offset="1" stop-color="#d58d9a"/>
+    </linearGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#6f2940" flood-opacity=".22"/></filter>
+  </defs>
+  <rect width="900" height="720" rx="42" fill="url(#sky)"/>
+  <circle cx="715" cy="125" r="172" fill="#fff" opacity=".46"/>
+  <path d="M620 720V262c0-87 70-157 157-157s157 70 157 157v458" fill="none" stroke="#fff9ee" stroke-width="34" opacity=".8"/>
+  <path d="M0 520c144-76 274-84 414-18s284 69 486-17v235H0z" fill="#bd7e82" opacity=".18"/>
+  <g fill="#7e3246" opacity=".23">
+    <circle cx="75" cy="102" r="7"/><circle cx="130" cy="72" r="4"/><circle cx="820" cy="345" r="6"/>
+    <path d="M50 180c70-74 120-55 150-2-65-30-115-13-150 2z"/>
+  </g>
+  <g filter="url(#shadow)">
+    <ellipse cx="467" cy="621" rx="270" ry="58" fill="#7c3848" opacity=".23"/>
+    <rect x="265" y="465" width="420" height="133" rx="22" fill="#f9e8e2" stroke="url(#gold)" stroke-width="8"/>
+    <path d="M278 496h394" stroke="#bd884b" stroke-width="2" opacity=".55"/>
+    <rect x="315" y="311" width="98" height="235" rx="20" fill="url(#pink)" stroke="url(#gold)" stroke-width="7"/>
+    <rect x="329" y="251" width="70" height="85" rx="12" fill="#8f334d"/>
+    <path d="M344 252v-95h40v95z" fill="#a8173e"/><path d="M344 157l40-24v24z" fill="#e65b79"/>
+    <rect x="467" y="368" width="162" height="178" rx="31" fill="#fff8f3" stroke="url(#gold)" stroke-width="7"/>
+    <circle cx="548" cy="448" r="52" fill="#cf8293"/><circle cx="548" cy="448" r="40" fill="#e6aeb6"/>
+    <path d="M521 447c18-36 43-37 57 0-13 23-42 31-57 0z" fill="#fff2ec" opacity=".45"/>
+    <path d="M497 368v-54h103v54" fill="#8b3c50" stroke="url(#gold)" stroke-width="7"/>
+  </g>
+  <g fill="none" stroke="#b7707d" stroke-width="4" opacity=".7">
+    <path d="M108 720c0-132 17-241 102-338"/><path d="M775 720c-1-121-31-210-92-276"/>
+  </g>
+  <g fill="#fff3ed" stroke="#b86c7c" stroke-width="3">
+    <path d="M168 408c-35-49-81-20-49 20-39-10-52 40-8 49-26 36 23 61 44 25 18 43 67 9 39-23 44-17 34-68-13-47-41 3-47-44-13-13-32-5-13 38z"/>
+    <path d="M720 455c-32-44-76-18-45 18-37-8-48 38-7 45-24 34 21 57 41 24 17 40 63 8 37-22 41-16 31-64-12-43-38 3-44-41-12-12-29-5-13 36z"/>
+  </g>
+  <g fill="#b6747e"><circle cx="154" cy="454" r="18"/><circle cx="707" cy="496" r="17"/></g>
+  <text x="78" y="112" fill="#6f2940" font-size="22" font-family="Georgia,serif" letter-spacing="7">FLOWER KNOWS</text>
+</svg>

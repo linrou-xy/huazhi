@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 页面基础设置：字符编码和移动端自适应 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 页面简介：方便浏览器和搜索引擎了解网站内容 -->
+    <meta name="description" content="花知晓彩妆商城课程作业展示页" />
+    <title>花知晓彩妆商城｜首页</title>
+    <!-- 引入全站公共样式文件 -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body class="home-store" data-page="home">
+    <!-- 顶部公告条：用于显示商城活动信息 -->
+    <div class="announcement">新会员注册即享满 199 减 30 · 全场满 299 包邮</div>
+
+    <!-- 顶部导航：四个页面均使用相对路径，可直接双击运行 -->
+    <header class="site-header">
+      <div class="nav-shell">
+        <!-- 左侧品牌标志：点击返回首页 -->
+        <a class="brand" href="index.html" aria-label="返回首页">
+          <span class="brand-mark">花</span>
+          <span class="brand-copy">
+            <strong>花知晓</strong>
+            <small>FLOWER KNOWS</small>
+          </span>
+        </a>
+
+        <!-- 移动端菜单开关：由 JavaScript 控制展开和收起 -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="展开导航"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+
+        <!-- 中间主导航：active 表示当前所在页面 -->
+        <nav class="main-nav" aria-label="主要导航">
+          <a class="active" href="index.html">首页</a>
+          <a href="products.html">全部商品</a>
+          <a href="packages.html">超值套餐</a>
+          <a href="member.html">会员福利</a>
+        </nav>
+
+        <!-- 购物袋按钮：数量由 JavaScript 和本地存储同步 -->
+        <button class="cart-button" type="button" data-cart-open>
+          购物袋 <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 页面主体内容开始 -->
+    <main>
+      <!-- 商城轮播图：支持自动播放、左右按钮和圆点切换 -->
+      <section class="store-carousel" data-carousel aria-label="首页活动轮播图">
+        <!-- 轮播内容容器 -->
+        <div class="carousel-track">
+          <!-- 第 1 张：春日彩妆系列 -->
+          <article class="commerce-slide active" data-carousel-slide>
+            <!-- 轮播背景图片：使用本地生成的商品摄影图 -->
+            <img src="images/banner-rose.png" alt="春日彩妆新品组合" />
+            <!-- 渐变遮罩：保证左侧文字在图片上清晰可读 -->
+            <div class="carousel-shade"></div>
+            <!-- 轮播文字内容 -->
+            <div class="carousel-copy container">
+              <p class="carousel-kicker">2026 春日新品</p>
+              <h1>春日柔雾彩妆<br />让好气色自然盛放</h1>
+              <p>轻盈显色，细腻贴肤，为每日妆容增添温柔光泽。</p>
+              <a class="btn" href="products.html">立即选购</a>
+            </div>
+          </article>
+
+          <!-- 第 2 张：清透护肤系列 -->
+          <article class="commerce-slide" data-carousel-slide>
+            <img src="images/banner-skincare.png" alt="清透护肤产品组合" />
+            <div class="carousel-shade"></div>
+            <div class="carousel-copy container">
+              <p class="carousel-kicker">城市轻护系列</p>
+              <h2>轻透水感防护<br />开启清爽好状态</h2>
+              <p>清爽肤感与细腻光泽，让通勤妆容更加轻松自然。</p>
+              <a class="btn" href="products.html?category=face">查看面部好物</a>
+            </div>
+          </article>
+
+          <!-- 第 3 张：节日礼赠系列，深色背景使用浅色文字 -->
+          <article class="commerce-slide dark-copy" data-carousel-slide>
+            <img src="images/banner-gift.png" alt="香水与彩妆节日礼盒" />
+            <div class="carousel-shade"></div>
+            <div class="carousel-copy container">
+              <p class="carousel-kicker">限定礼赠系列</p>
+              <h2>珍藏浪漫心意<br />为重要的人认真挑选</h2>
+              <p>限定彩妆与精美礼盒组合，让每一次打开都充满仪式感。</p>
+              <a class="btn btn-light" href="packages.html">探索限定礼盒</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- 轮播上一张按钮 -->
+        <button
+          class="carousel-arrow carousel-prev"
+          type="button"
+          data-carousel-prev
+          aria-label="上一张轮播图"
+        >
+          ‹
+        </button>
+        <!-- 轮播下一张按钮 -->
+        <button
+          class="carousel-arrow carousel-next"
+          type="button"
+          data-carousel-next
+          aria-label="下一张轮播图"
+        >
+          ›
+        </button>
+
+        <!-- 轮播圆点：data-carousel-dot 对应每张轮播图序号 -->
+        <div class="carousel-pagination" aria-label="选择轮播图">
+          <button
+            class="active"
+            type="button"
+            data-carousel-dot="0"
+            aria-label="第 1 张"
+          ></button>
+          <button
+            type="button"
+            data-carousel-dot="1"
+            aria-label="第 2 张"
+          ></button>
+          <button
+            type="button"
+            data-carousel-dot="2"
+            aria-label="第 3 张"
+          ></button>
+        </div>
+      </section>
+
+      <!-- 热销单品区域 -->
+      <section class="store-section hot-section">
+        <div class="container">
+          <!-- 区域标题和说明 -->
+          <div class="store-heading reveal">
+            <p class="eyebrow">BEST SELLERS</p>
+            <h2>热销单品</h2>
+            <span></span>
+            <p>从口碑好物中挑选你的日常心动单品</p>
+          </div>
+
+          <!-- 三列热销商品卡片 -->
+          <div class="store-product-grid">
+            <!-- 热销商品 1：丝绒唇釉 -->
+            <article
+              class="store-product-card reveal"
+              data-item
+              data-modal-title="天鹅芭蕾丝绒唇釉"
+              data-modal-price="¥129"
+              data-modal-image="images/lipstick.svg"
+              data-modal-text="轻盈柔雾质地，呈现温柔又有层次的玫瑰茶色。"
+              data-modal-list="柔雾哑光妆效|轻盈贴唇配方|精致芭蕾浮雕外壳"
+            >
+              <!-- 点击商品图片可以打开详情弹窗 -->
+              <button class="store-product-image" type="button" data-modal-open>
+                <img src="images/lipstick.svg" alt="天鹅芭蕾丝绒唇釉" />
+              </button>
+              <!-- 商品名称、简介、价格和加入购物袋按钮 -->
+              <div class="store-product-info">
+                <p>天鹅芭蕾系列</p>
+                <h3>丝绒唇釉 · 红茶玫瑰</h3>
+                <small>柔雾显色，轻盈贴唇，打造温柔氛围感。</small>
+                <div>
+                  <strong>¥129</strong
+                  ><button type="button" data-add-cart data-name="丝绒唇釉">
+                    加入购物袋
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 热销商品 2：五色眼影 -->
+            <article
+              class="store-product-card reveal"
+              data-item
+              data-modal-title="月光人鱼五色眼影"
+              data-modal-price="¥189"
+              data-modal-image="images/palette.svg"
+              data-modal-text="细闪、珠光与哑光组合，一盘完成通勤与约会眼妆。"
+              data-modal-list="五种实用配色|细腻易晕染|贝壳珠宝盒设计"
+            >
+              <button class="store-product-image" type="button" data-modal-open>
+                <img src="images/palette.svg" alt="月光人鱼五色眼影" />
+              </button>
+              <div class="store-product-info">
+                <p>月光人鱼系列</p>
+                <h3>五色眼影 · 海盐星河</h3>
+                <small>哑光与细闪搭配，轻松完成层次眼妆。</small>
+                <div>
+                  <strong>¥189</strong
+                  ><button type="button" data-add-cart data-name="五色眼影">
+                    加入购物袋
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- 热销商品 3：限定礼盒 -->
+            <article
+              class="store-product-card reveal"
+              data-item
+              data-modal-title="蔷薇庄园限定礼盒"
+              data-modal-price="¥399"
+              data-modal-image="images/giftset.svg"
+              data-modal-text="将唇妆、眼妆与腮红收入一只复古花园礼盒。"
+              data-modal-list="三件明星彩妆|限定收藏包装|附赠礼物手提袋"
+            >
+              <button class="store-product-image" type="button" data-modal-open>
+                <img src="images/giftset.svg" alt="蔷薇庄园限定礼盒" />
+              </button>
+              <div class="store-product-info">
+                <p>限定礼赠系列</p>
+                <h3>蔷薇庄园 · 臻藏礼盒</h3>
+                <small>明星单品组合，精美包装适合收藏与礼赠。</small>
+                <div>
+                  <strong>¥399</strong
+                  ><button type="button" data-add-cart data-name="蔷薇庄园礼盒">
+                    加入购物袋
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- 查看全部商品入口 -->
+          <div class="store-more">
+            <a class="text-link" href="products.html">查看全部商品 →</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 分类选购区域 -->
+      <section class="store-section category-shopping">
+        <div class="container">
+          <!-- 分类区域标题 -->
+          <div class="store-heading reveal">
+            <p class="eyebrow">SHOP BY CATEGORY</p>
+            <h2>分类选购</h2>
+            <span></span>
+            <p>按照彩妆类别快速找到适合自己的单品</p>
+          </div>
+
+          <!-- 四个分类图片入口 -->
+          <div class="category-card-grid">
+            <!-- 唇妆分类 -->
+            <a
+              class="category-visual-card reveal"
+              href="products.html?category=lip"
+              ><img src="images/banner-rose.png" alt="唇妆分类" /><span
+                ><strong>唇妆</strong><small>LIP COLOR</small></span
+              ></a
+            >
+            <!-- 眼妆分类 -->
+            <a
+              class="category-visual-card reveal"
+              href="products.html?category=eye"
+              ><img src="images/palette.svg" alt="眼妆分类" /><span
+                ><strong>眼妆</strong><small>EYE MAKEUP</small></span
+              ></a
+            >
+            <!-- 面部彩妆分类 -->
+            <a
+              class="category-visual-card reveal"
+              href="products.html?category=face"
+              ><img src="images/banner-skincare.png" alt="面部彩妆分类" /><span
+                ><strong>面部</strong><small>FACE MAKEUP</small></span
+              ></a
+            >
+            <!-- 礼盒分类 -->
+            <a class="category-visual-card reveal" href="packages.html"
+              ><img src="images/banner-gift.png" alt="限定礼盒分类" /><span
+                ><strong>礼盒</strong><small>GIFT SETS</small></span
+              ></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- 商城服务保障区域 -->
+      <section class="service-section">
+        <div class="container service-grid">
+          <!-- 服务保障 1 -->
+          <div class="service-item reveal">
+            <span>✓</span>
+            <div>
+              <strong>品质保障</strong>
+              <p>严选彩妆好物，提供安心购物体验</p>
+            </div>
+          </div>
+          <!-- 服务保障 2 -->
+          <div class="service-item reveal">
+            <span>◇</span>
+            <div>
+              <strong>满额包邮</strong>
+              <p>订单满 299 元即可享受包邮服务</p>
+            </div>
+          </div>
+          <!-- 服务保障 3 -->
+          <div class="service-item reveal">
+            <span>♧</span>
+            <div>
+              <strong>会员礼遇</strong>
+              <p>加入会员，解锁积分与限定福利</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 深色商城页脚 -->
+    <footer class="site-footer store-footer">
+      <div class="container footer-grid">
+        <!-- 页脚品牌简介 -->
+        <div>
+          <h3>花知晓彩妆商城</h3>
+          <p>用细腻色彩记录每一种独特的美，让彩妆成为掌心里的艺术收藏。</p>
+        </div>
+        <!-- 页脚购物帮助 -->
+        <div>
+          <h3>购物帮助</h3>
+          <a href="products.html">全部商品</a
+          ><a href="packages.html">优惠套餐</a
+          ><a href="member.html">会员福利</a>
+        </div>
+        <!-- 页脚品牌信息 -->
+        <div>
+          <h3>关于我们</h3>
+          <p>品牌故事</p>
+          <p>品质承诺</p>
+          <p>联系我们</p>
+        </div>
+        <!-- 页脚客服信息 -->
+        <div>
+          <h3>客服中心</h3>
+          <p>服务时间：09:00–21:00</p>
+          <p>课程作业演示页面</p>
+        </div>
+      </div>
+      <!-- 版权说明 -->
+      <p class="copyright">© 2026 花知晓彩妆商城</p>
+    </footer>
+
+    <!-- 通用商品详情弹窗 -->
+    <div class="modal" id="detailModal" aria-hidden="true">
+      <!-- 点击半透明遮罩可关闭弹窗 -->
+      <div class="modal-backdrop" data-modal-close></div>
+      <!-- 弹窗主面板：内容由商品卡片的 data 属性动态填入 -->
+      <section
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <!-- 弹窗关闭按钮 -->
+        <button
+          class="modal-close"
+          type="button"
+          data-modal-close
+          aria-label="关闭弹窗"
+        >
+          ×
+        </button>
+        <!-- 弹窗商品图片 -->
+        <div class="modal-media">
+          <img id="modalImage" src="images/giftset.svg" alt="商品图片" />
+        </div>
+        <!-- 弹窗商品文字和购买按钮 -->
+        <div class="modal-content">
+          <p class="eyebrow">PRODUCT DETAIL</p>
+          <h2 id="modalTitle">商品名称</h2>
+          <p id="modalText"></p>
+          <ul id="modalList"></ul>
+          <strong class="modal-price" id="modalPrice"></strong
+          ><button class="btn" type="button" data-modal-add>加入购物袋</button>
+        </div>
+      </section>
+    </div>
+
+    <!-- 操作提示条：加入购物袋后由 JavaScript 显示 -->
+    <div class="toast" role="status" aria-live="polite"></div>
+    <!-- 页面脚本放在 body 底部，避免阻塞内容加载 -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

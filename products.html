@@ -1,0 +1,459 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 页面基础设置：使用 UTF-8 编码并适配手机屏幕 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="花知晓彩妆商城全部商品" />
+    <title>花知晓彩妆商城｜全部商品</title>
+    <!-- 引入全站公共样式 -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="products">
+    <!-- 公共导航 -->
+    <header class="site-header">
+      <div class="nav-shell">
+        <!-- 品牌标志区域 -->
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">花</span
+          ><span class="brand-copy"
+            ><strong>花知晓</strong><small>FLOWER KNOWS</small></span
+          ></a
+        >
+        <!-- 手机端导航开关 -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="展开导航"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <!-- 页面主导航：当前高亮“全部商品” -->
+        <nav class="main-nav" aria-label="主要导航">
+          <a href="index.html">首页</a
+          ><a class="active" href="products.html">全部商品</a
+          ><a href="packages.html">超值套餐</a
+          ><a href="member.html">会员福利</a>
+        </nav>
+        <!-- 购物袋按钮与动态数量 -->
+        <button class="cart-button" type="button" data-cart-open>
+          购物袋 <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 商品页面主体内容 -->
+    <main>
+      <!-- 页面标题区：说明当前页面用途 -->
+      <section class="page-hero">
+        <div class="container reveal">
+          <p class="eyebrow">ALL COLLECTIONS</p>
+          <h1>寻觅你的心动彩妆</h1>
+          <p>从唇间色彩到眼眸星光，以精巧设计点亮每一个平凡日常。</p>
+        </div>
+      </section>
+
+      <!-- 商品目录：分类按钮与搜索框由 JavaScript 联动筛选 -->
+      <section class="product-section">
+        <div class="container">
+          <!-- 商品工具栏：左侧分类筛选，右侧关键词搜索 -->
+          <div class="catalog-toolbar reveal">
+            <!-- 分类按钮：data-filter 值与商品的 data-category 对应 -->
+            <div class="filter-group" aria-label="商品分类筛选">
+              <button
+                class="filter-button active"
+                type="button"
+                data-filter="all"
+              >
+                全部 <span id="productCount">8</span>
+              </button>
+              <button class="filter-button" type="button" data-filter="lip">
+                唇妆
+              </button>
+              <button class="filter-button" type="button" data-filter="eye">
+                眼妆
+              </button>
+              <button class="filter-button" type="button" data-filter="face">
+                面部
+              </button>
+              <button class="filter-button" type="button" data-filter="gift">
+                礼盒
+              </button>
+            </div>
+            <!-- 商品名称搜索框：输入内容时立即筛选商品 -->
+            <label class="search-box"
+              ><input
+                id="productSearch"
+                type="search"
+                placeholder="搜索商品名称"
+                aria-label="搜索商品"
+              /><span>⌕</span></label
+            >
+          </div>
+
+          <!-- 商品网格：每张卡片都包含分类、名称和弹窗数据 -->
+          <div class="product-grid">
+            <!-- 唇妆商品 1：天鹅芭蕾丝绒唇釉 -->
+            <article
+              class="product-card reveal"
+              data-product-card
+              data-category="lip"
+              data-name="天鹅芭蕾丝绒唇釉 红茶玫瑰"
+              data-item
+              data-modal-title="天鹅芭蕾丝绒唇釉"
+              data-modal-price="¥129"
+              data-modal-image="images/lipstick.svg"
+              data-modal-text="轻盈柔雾质地，呈现温柔又有层次的玫瑰茶色。"
+              data-modal-list="柔雾哑光妆效|轻盈贴唇配方|精致芭蕾浮雕外壳"
+            >
+              <span class="product-badge">人气</span
+              ><button
+                class="product-image-button"
+                type="button"
+                data-modal-open
+              >
+                <img src="images/lipstick.svg" alt="天鹅芭蕾丝绒唇釉" />
+              </button>
+              <div class="product-info">
+                <p class="product-category">天鹅芭蕾系列</p>
+                <h3>丝绒唇釉 · 红茶玫瑰</h3>
+                <div class="product-meta">
+                  <strong class="price">¥129</strong
+                  ><button
+                    class="mini-add"
+                    type="button"
+                    data-add-cart
+                    data-name="丝绒唇釉"
+                  >
+                    ＋
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 唇妆商品 2：草莓洛可可水光唇釉 -->
+            <article
+              class="product-card reveal"
+              data-product-card
+              data-category="lip"
+              data-name="草莓洛可可水光唇釉"
+              data-item
+              data-modal-title="草莓洛可可水光唇釉"
+              data-modal-price="¥119"
+              data-modal-image="images/lipstick.svg"
+              data-modal-text="清透水光包裹鲜嫩莓果色，轻轻一抹呈现饱满唇色。"
+              data-modal-list="清透镜面水光|鲜嫩莓果色调|滋润不易拔干"
+            >
+              <button
+                class="product-image-button"
+                type="button"
+                data-modal-open
+              >
+                <img src="images/lipstick.svg" alt="草莓洛可可水光唇釉" />
+              </button>
+              <div class="product-info">
+                <p class="product-category">草莓洛可可系列</p>
+                <h3>水光唇釉 · 莓果舞会</h3>
+                <div class="product-meta">
+                  <strong class="price">¥119</strong
+                  ><button
+                    class="mini-add"
+                    type="button"
+                    data-add-cart
+                    data-name="水光唇釉"
+                  >
+                    ＋
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 眼妆商品 1：月光人鱼五色眼影 -->
+            <article
+              class="product-card reveal"
+              data-product-card
+              data-category="eye"
+              data-name="月光人鱼五色眼影 海盐星河"
+              data-item
+              data-modal-title="月光人鱼五色眼影"
+              data-modal-price="¥189"
+              data-modal-image="images/palette.svg"
+              data-modal-text="细闪、珠光与哑光组合，一盘完成通勤与约会眼妆。"
+              data-modal-list="五种实用配色|细腻易晕染|贝壳珠宝盒设计"
+            >
+              <span class="product-badge">新品</span
+              ><button
+                class="product-image-button"
+                type="button"
+                data-modal-open
+              >
+                <img src="images/palette.svg" alt="月光人鱼五色眼影" />
+              </button>
+              <div class="product-info">
+                <p class="product-category">月光人鱼系列</p>
+                <h3>五色眼影 · 海盐星河</h3>
+                <div class="product-meta">
+                  <strong class="price">¥189</strong
+                  ><button
+                    class="mini-add"
+                    type="button"
+                    data-add-cart
+                    data-name="五色眼影"
+                  >
+                    ＋
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 眼妆商品 2：独角兽浮雕眼影盘 -->
+            <article
+              class="product-card reveal"
+              data-product-card
+              data-category="eye"
+              data-name="独角兽浮雕眼影 森林茶会"
+              data-item
+              data-modal-title="独角兽浮雕眼影盘"
+              data-modal-price="¥199"
+              data-modal-image="images/palette.svg"
+              data-modal-text="森林大地色搭配梦幻偏光，柔和实用又不失灵动。"
+              data-modal-list="六格层次配色|高显色低飞粉|独角兽浮雕外壳"
+            >
+              <button
+                class="product-image-button"
+                type="button"
+                data-modal-open
+              >
+                <img src="images/palette.svg" alt="独角兽浮雕眼影盘" />
+              </button>
+              <div class="product-info">
+                <p class="product-category">独角兽系列</p>
+                <h3>浮雕眼影 · 森林茶会</h3>
+                <div class="product-meta">
+                  <strong class="price">¥199</strong
+                  ><button
+                    class="mini-add"
+                    type="button"
+                    data-add-cart
+                    data-name="浮雕眼影"
+                  >
+                    ＋
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 面部商品 1：仲夏夜浮雕腮红 -->
+            <article
+              class="product-card reveal"
+              data-product-card
+              data-category="face"
+              data-name="仲夏夜浮雕腮红 晨露蔷薇"
+              data-item
+              data-modal-title="仲夏夜浮雕腮红"
+              data-modal-price="¥159"
+              data-modal-image="images/palette.svg"
+              data-modal-text="低饱和蜜桃粉调，为面颊带来自然轻盈的通透红晕。"
+              data-modal-list="自然蜜桃粉调|柔焦细腻粉质|花窗浮雕压纹"
+            >
+              <button
+                class="product-image-button"
+                type="button"
+                data-modal-open
+              >
+                <img src="images/palette.svg" alt="仲夏夜浮雕腮红" />
+              </button>
+              <div class="product-info">
+                <p class="product-category">仲夏夜系列</p>
+                <h3>浮雕腮红 · 晨露蔷薇</h3>
+                <div class="product-meta">
+                  <strong class="price">¥159</strong
+                  ><button
+                    class="mini-add"
+                    type="button"
+                    data-add-cart
+                    data-name="浮雕腮红"
+                  >
+                    ＋
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 面部商品 2：小天使浮雕高光 -->
+            <article
+              class="product-card reveal"
+              data-product-card
+              data-category="face"
+              data-name="小天使高光 香槟月晕"
+              data-item
+              data-modal-title="小天使浮雕高光"
+              data-modal-price="¥169"
+              data-modal-image="images/palette.svg"
+              data-modal-text="细腻香槟光泽贴合肌肤，打造自然通透的立体轮廓。"
+              data-modal-list="细腻香槟微闪|柔和不显毛孔|天使浮雕粉面"
+            >
+              <button
+                class="product-image-button"
+                type="button"
+                data-modal-open
+              >
+                <img src="images/palette.svg" alt="小天使浮雕高光" />
+              </button>
+              <div class="product-info">
+                <p class="product-category">小天使系列</p>
+                <h3>浮雕高光 · 香槟月晕</h3>
+                <div class="product-meta">
+                  <strong class="price">¥169</strong
+                  ><button
+                    class="mini-add"
+                    type="button"
+                    data-add-cart
+                    data-name="浮雕高光"
+                  >
+                    ＋
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 礼盒商品 1：蔷薇庄园限定礼盒 -->
+            <article
+              class="product-card reveal"
+              data-product-card
+              data-category="gift"
+              data-name="蔷薇庄园限定礼盒"
+              data-item
+              data-modal-title="蔷薇庄园限定礼盒"
+              data-modal-price="¥399"
+              data-modal-image="images/giftset.svg"
+              data-modal-text="将唇妆、眼妆与腮红收入一只复古花园礼盒。"
+              data-modal-list="三件明星彩妆|限定收藏包装|附赠礼物手提袋"
+            >
+              <span class="product-badge">限定</span
+              ><button
+                class="product-image-button"
+                type="button"
+                data-modal-open
+              >
+                <img src="images/giftset.svg" alt="蔷薇庄园限定礼盒" />
+              </button>
+              <div class="product-info">
+                <p class="product-category">限定礼赠系列</p>
+                <h3>蔷薇庄园 · 臻藏礼盒</h3>
+                <div class="product-meta">
+                  <strong class="price">¥399</strong
+                  ><button
+                    class="mini-add"
+                    type="button"
+                    data-add-cart
+                    data-name="蔷薇庄园礼盒"
+                  >
+                    ＋
+                  </button>
+                </div>
+              </div>
+            </article>
+            <!-- 礼盒商品 2：月光人鱼全妆礼盒 -->
+            <article
+              class="product-card reveal"
+              data-product-card
+              data-category="gift"
+              data-name="月光人鱼全妆礼盒"
+              data-item
+              data-modal-title="月光人鱼全妆礼盒"
+              data-modal-price="¥529"
+              data-modal-image="images/giftset.svg"
+              data-modal-text="眼影、唇釉、高光与化妆镜组合，完整收藏海洋月光。"
+              data-modal-list="四件完整妆容单品|限定贝壳手镜|珠光收藏礼盒"
+            >
+              <button
+                class="product-image-button"
+                type="button"
+                data-modal-open
+              >
+                <img src="images/giftset.svg" alt="月光人鱼全妆礼盒" />
+              </button>
+              <div class="product-info">
+                <p class="product-category">月光人鱼系列</p>
+                <h3>月光人鱼 · 全妆礼盒</h3>
+                <div class="product-meta">
+                  <strong class="price">¥529</strong
+                  ><button
+                    class="mini-add"
+                    type="button"
+                    data-add-cart
+                    data-name="月光人鱼礼盒"
+                  >
+                    ＋
+                  </button>
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- 空结果提示：没有匹配商品时由 JS 取消 hidden 属性 -->
+          <div class="empty-state" hidden>
+            <strong>没有找到相关商品</strong>
+            <p>试试更换分类或输入其他关键词。</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 公共页脚：品牌信息、页面链接和作业说明 -->
+    <footer class="site-footer">
+      <!-- 页脚品牌信息 -->
+      <div>
+        <a class="brand footer-brand" href="index.html"
+          ><span class="brand-mark">花</span
+          ><span class="brand-copy"
+            ><strong>花知晓</strong><small>FLOWER KNOWS</small></span
+          ></a
+        >
+        <p>浪漫艺术彩妆体验站</p>
+      </div>
+      <!-- 页脚页面快捷链接 -->
+      <div class="footer-links">
+        <a href="products.html">全部商品</a><a href="packages.html">超值套餐</a
+        ><a href="member.html">会员福利</a>
+      </div>
+      <!-- 版权与课程展示说明 -->
+      <p class="copyright">© 2026 课程作业演示页面 · 商品信息仅供界面展示</p>
+    </footer>
+
+    <!-- 商品详情弹窗 -->
+    <div class="modal" id="detailModal" aria-hidden="true">
+      <!-- 点击背景遮罩可关闭弹窗 -->
+      <div class="modal-backdrop" data-modal-close></div>
+      <!-- 弹窗主面板：商品内容由 JavaScript 动态写入 -->
+      <section
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <!-- 弹窗关闭按钮 -->
+        <button
+          class="modal-close"
+          type="button"
+          data-modal-close
+          aria-label="关闭"
+        >
+          ×
+        </button>
+        <!-- 弹窗商品图片区域 -->
+        <div class="modal-media">
+          <img id="modalImage" src="images/giftset.svg" alt="商品图片" />
+        </div>
+        <!-- 弹窗商品文字与加入购物袋按钮 -->
+        <div class="modal-content">
+          <p class="eyebrow">PRODUCT DETAIL</p>
+          <h2 id="modalTitle">商品名称</h2>
+          <p id="modalText"></p>
+          <ul id="modalList"></ul>
+          <strong class="modal-price" id="modalPrice"></strong
+          ><button class="btn" type="button" data-modal-add>加入购物袋</button>
+        </div>
+      </section>
+    </div>
+    <!-- 页面右下角操作反馈提示 -->
+    <div class="toast" role="status" aria-live="polite"></div>
+    <!-- 引入全站 JavaScript 功能文件 -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

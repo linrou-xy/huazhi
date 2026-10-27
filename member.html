@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 页面基础设置：编码、移动端适配和页面介绍 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="花知晓彩妆商城会员福利" />
+    <title>花知晓彩妆商城｜会员福利</title>
+    <!-- 引入全站公共样式 -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="member">
+    <!-- 公共导航 -->
+    <header class="site-header">
+      <div class="nav-shell">
+        <!-- 品牌标志：点击返回网站首页 -->
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">花</span
+          ><span class="brand-copy"
+            ><strong>花知晓</strong><small>FLOWER KNOWS</small></span
+          ></a
+        >
+        <!-- 手机端菜单按钮 -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="展开导航"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <!-- 主导航：当前高亮“会员福利” -->
+        <nav class="main-nav" aria-label="主要导航">
+          <a href="index.html">首页</a><a href="products.html">全部商品</a
+          ><a href="packages.html">超值套餐</a
+          ><a class="active" href="member.html">会员福利</a>
+        </nav>
+        <!-- 购物袋入口和实时数量 -->
+        <button class="cart-button" type="button" data-cart-open>
+          购物袋 <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 会员页面主体内容 -->
+    <main>
+      <!-- 会员首屏 -->
+      <section class="member-banner">
+        <div class="container member-grid">
+          <!-- 首屏左侧：会员介绍和加入按钮 -->
+          <div class="member-copy reveal">
+            <p class="eyebrow">FLOWER GARDEN CLUB</p>
+            <h1>欢迎来到<br />花园会员俱乐部</h1>
+            <p>
+              每一次心动选择都会化作花瓣积分，陪你解锁专属礼遇、生日惊喜与限定新品体验。
+            </p>
+            <button
+              class="btn btn-light"
+              type="button"
+              data-benefit-claim
+              data-name="花园会员"
+            >
+              免费加入会员
+            </button>
+          </div>
+          <!-- 首屏右侧：本地 SVG 会员卡插画 -->
+          <div class="member-card-art reveal">
+            <img src="images/membership.svg" alt="花园会员卡" />
+          </div>
+        </div>
+      </section>
+
+      <!-- 会员福利：每张卡片点击后展示对应说明 -->
+      <section class="benefit-section">
+        <div class="container">
+          <!-- 福利区域标题和操作说明 -->
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">MEMBER BENEFITS</p>
+              <h2 class="section-title">四重花园礼遇</h2>
+            </div>
+            <p class="section-copy">点击任意福利卡片，查看具体领取方式。</p>
+          </div>
+          <!-- 四项会员福利按钮列表 -->
+          <div class="benefit-grid">
+            <!-- 福利 1：新人注册见面礼 -->
+            <button
+              class="benefit-card reveal"
+              type="button"
+              data-item
+              data-modal-open
+              data-modal-title="新人见面礼"
+              data-modal-price="注册即可领取"
+              data-modal-image="images/membership.svg"
+              data-modal-text="首次加入花园会员，即可获得专属新人优惠与试用礼。"
+              data-modal-list="满199减30优惠券|两款随机试用装|会员专属电子卡"
+            >
+              <span class="benefit-number">01</span>
+              <h3>新人见面礼</h3>
+              <p>入会即享优惠券与惊喜试用装。</p>
+            </button>
+            <!-- 福利 2：生日月双倍花瓣积分 -->
+            <button
+              class="benefit-card reveal"
+              type="button"
+              data-item
+              data-modal-open
+              data-modal-title="生日双倍花瓣"
+              data-modal-price="生日月专享"
+              data-modal-image="images/membership.svg"
+              data-modal-text="生日当月购物可享双倍花瓣积分，还有一份特别生日礼。"
+              data-modal-list="消费积分双倍累计|生日限定电子贺卡|随机彩妆小样"
+            >
+              <span class="benefit-number">02</span>
+              <h3>生日双倍花瓣</h3>
+              <p>生日月双倍积分，还有专属小礼。</p>
+            </button>
+            <!-- 福利 3：会员新品优先试用 -->
+            <button
+              class="benefit-card reveal"
+              type="button"
+              data-item
+              data-modal-open
+              data-modal-title="新品优先试用"
+              data-modal-price="银卡会员解锁"
+              data-modal-image="images/membership.svg"
+              data-modal-text="新品正式发售前，部分会员可报名参与抢先试用。"
+              data-modal-list="新品试用报名资格|新品预售优先购买|体验反馈额外积分"
+            >
+              <span class="benefit-number">03</span>
+              <h3>新品优先试用</h3>
+              <p>抢先体验新系列，分享真实感受。</p>
+            </button>
+            <!-- 福利 4：花瓣积分兑换礼品 -->
+            <button
+              class="benefit-card reveal"
+              type="button"
+              data-item
+              data-modal-open
+              data-modal-title="花瓣积分兑礼"
+              data-modal-price="100 花瓣起兑"
+              data-modal-image="images/membership.svg"
+              data-modal-text="购买商品和参与互动均可积累花瓣，兑换限定周边与优惠券。"
+              data-modal-list="每日签到积花瓣|消费自动累计积分|限定周边定期上新"
+            >
+              <span class="benefit-number">04</span>
+              <h3>花瓣积分兑礼</h3>
+              <p>积攒花瓣，兑换限定好礼与优惠。</p>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 会员等级对照表 -->
+      <section class="benefit-section" style="padding-top: 0">
+        <div class="container">
+          <!-- 等级区域标题和说明 -->
+          <div class="section-head reveal">
+            <div>
+              <p class="eyebrow">MEMBER LEVELS</p>
+              <h2 class="section-title">成长等级</h2>
+            </div>
+            <p class="section-copy">花瓣越多，解锁的专属礼遇越丰富。</p>
+          </div>
+          <!-- 三种会员等级及其成长条件和权益 -->
+          <div class="reveal">
+            <table class="level-table">
+              <!-- 表头：等级、花瓣数量和权益 -->
+              <thead>
+                <tr>
+                  <th>会员等级</th>
+                  <th>成长花瓣</th>
+                  <th>专属权益</th>
+                </tr>
+              </thead>
+              <!-- 表格主体：不同等级对应的数据 -->
+              <tbody>
+                <tr>
+                  <td>花芽会员</td>
+                  <td>0–499</td>
+                  <td>新人礼、会员积分</td>
+                </tr>
+                <tr>
+                  <td>银叶会员</td>
+                  <td>500–1499</td>
+                  <td>新品试用、生日双倍积分</td>
+                </tr>
+                <tr>
+                  <td>金蔷薇会员</td>
+                  <td>1500+</td>
+                  <td>限定礼盒优先购、专属客服</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 公共页脚 -->
+    <footer class="site-footer">
+      <!-- 页脚品牌信息 -->
+      <div>
+        <a class="brand footer-brand" href="index.html"
+          ><span class="brand-mark">花</span
+          ><span class="brand-copy"
+            ><strong>花知晓</strong><small>FLOWER KNOWS</small></span
+          ></a
+        >
+        <p>浪漫艺术彩妆体验站</p>
+      </div>
+      <!-- 页脚快捷导航 -->
+      <div class="footer-links">
+        <a href="products.html">全部商品</a><a href="packages.html">超值套餐</a
+        ><a href="member.html">会员福利</a>
+      </div>
+      <!-- 版权和课程展示说明 -->
+      <p class="copyright">© 2026 课程作业演示页面 · 商品信息仅供界面展示</p>
+    </footer>
+
+    <!-- 会员福利详情弹窗 -->
+    <div class="modal" id="detailModal" aria-hidden="true">
+      <!-- 点击背景遮罩可关闭弹窗 -->
+      <div class="modal-backdrop" data-modal-close></div>
+      <!-- 弹窗主面板：由 JS 填入所点击福利的详细内容 -->
+      <section
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <!-- 弹窗关闭按钮 -->
+        <button class="modal-close" type="button" data-modal-close>×</button>
+        <!-- 福利插画区域 -->
+        <div class="modal-media">
+          <img id="modalImage" src="images/membership.svg" alt="会员福利" />
+        </div>
+        <!-- 福利标题、说明、条件和领取按钮 -->
+        <div class="modal-content">
+          <p class="eyebrow">MEMBER BENEFIT</p>
+          <h2 id="modalTitle">会员福利</h2>
+          <p id="modalText"></p>
+          <ul id="modalList"></ul>
+          <strong class="modal-price" id="modalPrice"></strong
+          ><button class="btn" type="button" data-benefit-claim>
+            立即领取福利
+          </button>
+        </div>
+      </section>
+    </div>
+    <!-- 入会或领取成功后的提示条 -->
+    <div class="toast" role="status" aria-live="polite"></div>
+    <!-- 引入公共 JavaScript 文件 -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff8ed"/><stop offset="1" stop-color="#ddafae"/></linearGradient><linearGradient id="card" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6e203b"/><stop offset="1" stop-color="#ad5b69"/></linearGradient><linearGradient id="g"><stop stop-color="#fff0b4"/><stop offset=".5" stop-color="#b98443"/><stop offset="1" stop-color="#ffe69f"/></linearGradient></defs>
+  <rect width="500" height="500" rx="56" fill="url(#b)"/>
+  <ellipse cx="250" cy="409" rx="167" ry="35" fill="#5e2536" opacity=".18"/>
+  <g transform="rotate(-7 250 250)"><rect x="72" y="123" width="356" height="252" rx="34" fill="url(#card)" stroke="url(#g)" stroke-width="8"/><path d="M107 164h286M107 338h286" stroke="#f5d991" stroke-width="2" opacity=".6"/><circle cx="349" cy="250" r="47" fill="none" stroke="#f4d88d" stroke-width="6"/><path d="M349 215l11 23 25 4-18 18 4 25-22-12-23 12 5-25-19-18 26-4z" fill="#f4d88d"/><text x="112" y="241" fill="#fff6e7" font-size="26" font-family="Georgia,serif" letter-spacing="4">ROSE CLUB</text><text x="112" y="279" fill="#eacb83" font-size="15" font-family="Georgia,serif" letter-spacing="3">MEMBER CARD</text></g>
+</svg>

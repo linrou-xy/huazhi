@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <!-- 页面基础设置：编码、响应式视口和页面说明 -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="花知晓彩妆商城超值套餐" />
+    <title>花知晓彩妆商城｜超值套餐</title>
+    <!-- 引入公共 CSS 样式文件 -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body data-page="packages">
+    <!-- 公共导航 -->
+    <header class="site-header">
+      <div class="nav-shell">
+        <!-- 左侧品牌标志：点击返回首页 -->
+        <a class="brand" href="index.html"
+          ><span class="brand-mark">花</span
+          ><span class="brand-copy"
+            ><strong>花知晓</strong><small>FLOWER KNOWS</small></span
+          ></a
+        >
+        <!-- 移动端菜单开关 -->
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="展开导航"
+          aria-expanded="false"
+        >
+          ☰
+        </button>
+        <!-- 主导航：当前高亮“超值套餐” -->
+        <nav class="main-nav" aria-label="主要导航">
+          <a href="index.html">首页</a><a href="products.html">全部商品</a
+          ><a class="active" href="packages.html">超值套餐</a
+          ><a href="member.html">会员福利</a>
+        </nav>
+        <!-- 购物袋入口和商品数量 -->
+        <button class="cart-button" type="button" data-cart-open>
+          购物袋 <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 套餐页面主体 -->
+    <main>
+      <!-- 页面标题与套餐购买说明 -->
+      <section class="page-hero">
+        <div class="container reveal">
+          <p class="eyebrow">VALUE SETS</p>
+          <h1>把一整套浪漫带回家</h1>
+          <p>为通勤、约会与礼赠精心搭配，组合购买更轻松，也更划算。</p>
+        </div>
+      </section>
+
+      <!-- 套餐卡片：点击按钮会弹出当前套餐的完整信息 -->
+      <section class="package-section">
+        <!-- 三列套餐卡片容器 -->
+        <div class="container package-grid">
+          <!-- 套餐 1：适合通勤使用的轻盈日常妆 -->
+          <article
+            class="package-card reveal"
+            data-item
+            data-modal-title="轻盈日常妆套餐"
+            data-modal-price="套餐价 ¥299"
+            data-modal-image="images/giftset.svg"
+            data-modal-text="一套完成自然通勤妆，色彩柔和、步骤简单，适合每天使用。"
+            data-modal-list="丝绒唇釉 1 支|五色眼影盘 1 盘|浮雕腮红 1 盒"
+          >
+            <!-- 套餐展示图片 -->
+            <img src="images/giftset.svg" alt="轻盈日常妆套餐" />
+            <!-- 套餐名称、商品清单、价格和详情按钮 -->
+            <div class="package-content">
+              <p class="eyebrow">DAILY LOOK</p>
+              <h2>轻盈日常妆</h2>
+              <ul class="package-list">
+                <li>丝绒唇釉 × 1</li>
+                <li>五色眼影 × 1</li>
+                <li>浮雕腮红 × 1</li>
+              </ul>
+              <div class="package-price">
+                <strong>¥299</strong><del>单买 ¥477</del>
+              </div>
+              <button class="btn btn-outline" type="button" data-modal-open>
+                查看套餐详情
+              </button>
+            </div>
+          </article>
+          <!-- 套餐 2：页面重点推荐的月光约会妆 -->
+          <article
+            class="package-card featured reveal"
+            data-item
+            data-modal-title="月光约会妆套餐"
+            data-modal-price="套餐价 ¥399"
+            data-modal-image="images/giftset.svg"
+            data-modal-text="月光般闪耀的完整约会妆容，从眼眸到唇间都拥有精致光泽。"
+            data-modal-list="月光人鱼眼影 1 盘|水光唇釉 1 支|浮雕高光 1 盒|限定手镜 1 面"
+          >
+            <!-- 推荐标签和套餐展示图片 -->
+            <span class="product-badge">最受欢迎</span
+            ><img src="images/giftset.svg" alt="月光约会妆套餐" />
+            <div class="package-content">
+              <p class="eyebrow">DATE NIGHT</p>
+              <h2>月光约会妆</h2>
+              <ul class="package-list">
+                <li>月光人鱼眼影 × 1</li>
+                <li>水光唇釉 × 1</li>
+                <li>浮雕高光 × 1</li>
+                <li>限定手镜 × 1</li>
+              </ul>
+              <div class="package-price">
+                <strong>¥399</strong><del>单买 ¥576</del>
+              </div>
+              <button class="btn" type="button" data-modal-open>
+                查看套餐详情
+              </button>
+            </div>
+          </article>
+          <!-- 套餐 3：适合赠送亲友的蔷薇礼赠套装 -->
+          <article
+            class="package-card reveal"
+            data-item
+            data-modal-title="蔷薇礼赠套餐"
+            data-modal-price="套餐价 ¥529"
+            data-modal-image="images/giftset.svg"
+            data-modal-text="为重要的人准备的典藏礼赠套装，打开礼盒就是满满仪式感。"
+            data-modal-list="限定全妆礼盒 1 套|收藏梳妆镜 1 面|花园手提袋 1 只|祝福留言卡 1 张"
+          >
+            <img src="images/giftset.svg" alt="蔷薇礼赠套餐" />
+            <div class="package-content">
+              <p class="eyebrow">SPECIAL GIFT</p>
+              <h2>蔷薇礼赠套装</h2>
+              <ul class="package-list">
+                <li>限定全妆礼盒 × 1</li>
+                <li>收藏梳妆镜 × 1</li>
+                <li>花园手提袋 × 1</li>
+                <li>祝福留言卡 × 1</li>
+              </ul>
+              <div class="package-price">
+                <strong>¥529</strong><del>单买 ¥688</del>
+              </div>
+              <button class="btn btn-outline" type="button" data-modal-open>
+                查看套餐详情
+              </button>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- 公共页脚 -->
+    <footer class="site-footer">
+      <!-- 页脚品牌介绍 -->
+      <div>
+        <a class="brand footer-brand" href="index.html"
+          ><span class="brand-mark">花</span
+          ><span class="brand-copy"
+            ><strong>花知晓</strong><small>FLOWER KNOWS</small></span
+          ></a
+        >
+        <p>浪漫艺术彩妆体验站</p>
+      </div>
+      <!-- 页脚快捷导航 -->
+      <div class="footer-links">
+        <a href="products.html">全部商品</a><a href="packages.html">超值套餐</a
+        ><a href="member.html">会员福利</a>
+      </div>
+      <!-- 课程作业用途说明 -->
+      <p class="copyright">© 2026 课程作业演示页面 · 商品信息仅供界面展示</p>
+    </footer>
+
+    <!-- 套餐详情弹窗 -->
+    <div class="modal" id="detailModal" aria-hidden="true">
+      <!-- 背景遮罩：点击后关闭详情 -->
+      <div class="modal-backdrop" data-modal-close></div>
+      <!-- 弹窗面板：data 属性中的套餐内容会显示在此处 -->
+      <section
+        class="modal-panel"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modalTitle"
+      >
+        <!-- 弹窗关闭按钮 -->
+        <button class="modal-close" type="button" data-modal-close>×</button>
+        <!-- 套餐大图区域 -->
+        <div class="modal-media">
+          <img id="modalImage" src="images/giftset.svg" alt="套餐图片" />
+        </div>
+        <!-- 套餐名称、说明、清单、价格和购买操作 -->
+        <div class="modal-content">
+          <p class="eyebrow">SET DETAIL</p>
+          <h2 id="modalTitle">套餐名称</h2>
+          <p id="modalText"></p>
+          <ul id="modalList"></ul>
+          <strong class="modal-price" id="modalPrice"></strong
+          ><button class="btn" type="button" data-modal-add>
+            整套加入购物袋
+          </button>
+        </div>
+      </section>
+    </div>
+    <!-- 操作成功后的短暂提示信息 -->
+    <div class="toast" role="status" aria-live="polite"></div>
+    <!-- 引入公共 JavaScript 交互脚本 -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
