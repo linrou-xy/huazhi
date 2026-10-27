@@ -131,7 +131,7 @@
     var list = document.getElementById("modalList");
 
     if (image) {
-      image.src = item.dataset.modalImage || "images/giftset.svg";
+      image.src = item.dataset.modalImage || "images/giftset.png";
       image.alt = item.dataset.modalTitle || "详情图片";
     }
     if (title) title.textContent = item.dataset.modalTitle || "精选内容";
